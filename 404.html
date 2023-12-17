@@ -4,16 +4,7 @@
   <title>Redirect Page</title>
   <script type="text/javascript">
     function redirect() {
-      console.log('doc: ' + document.referrer)
-      console.log('win: ' + window.location.href)
-      var oldUrl = document.referrer;
-      if (oldUrl) {
-        var url = new URL(oldUrl);
-        var newPath = url.pathname + url.search;
-        window.location.href = 'https://www.vitaut.net' + newPath;
-      } else {
-        window.location.href = 'https://vitaut.net';
-      }
+      window.location.href = 'https://www.vitaut.net' + window.location.href.pathname;
     }
   </script>
 </head>
