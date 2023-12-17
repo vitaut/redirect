@@ -4,6 +4,8 @@
   <title>Redirect Page</title>
   <script type="text/javascript">
     function redirect() {
+      console.log('doc: ' + document.referrer)
+      console.log('win: ' + window.location.href)
       var oldUrl = document.referrer;
       if (oldUrl) {
         var url = new URL(oldUrl);
